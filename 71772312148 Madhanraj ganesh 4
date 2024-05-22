@@ -1,0 +1,34 @@
+class NumberTooSmall(Exception):
+    """Exception raised when the number is less than 3."""
+    pass
+
+class NumberTooBig(Exception):
+    """Exception raised when the number is more than 30."""
+    pass
+
+def main():
+    numbers_dict = {}
+    count = 0
+
+    while count < 10:
+        try:
+            num = int(input(f"Enter integer {count + 1}/10: "))
+            if num < 3:
+                raise NumberTooSmall("The number entered is too small.")
+            elif num > 30:
+                raise NumberTooBig("The number entered is too big.")
+            numbers_dict[num] = num ** 3
+            count += 1
+        except NumberTooSmall as e:
+            print(e)
+        except NumberTooBig as e:
+            print(e)
+        except ValueError:
+            print("Invalid input. Please enter an integer.")
+        finally:
+            print(f"Current contents of the dictionary: {numbers_dict}")
+
+    print("Final contents of the dictionary:", numbers_dict)
+
+if __name__ == "__main__":
+    main()
