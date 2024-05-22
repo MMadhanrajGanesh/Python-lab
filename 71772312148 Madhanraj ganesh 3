@@ -1,0 +1,17 @@
+try:
+    # Outer try block
+    try:
+        # Inner try block
+        pass
+    except SomeSpecificException as e:
+        # Handle specific exception for the inner try block
+        pass
+    finally:
+        # Inner finally block
+        pass
+except AnotherException as e:
+    # Handle exception for the outer try block
+    pass
+finally:
+    # Outer finally block
+    pass
