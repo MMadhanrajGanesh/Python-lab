@@ -1,0 +1,9 @@
+try:
+    # Code that may raise an exception
+    pass
+except SomeException as e:
+    # Code to handle the exception
+    pass
+finally:
+    # Code that will always be executed, regardless of exceptions
+    pass
